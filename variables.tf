@@ -1,10 +1,10 @@
 variable "vpc_cidr" {
   description = "The CIDR block for the VPC"
-  type = string
+  type        = string
 }
 
 variable "public_subnet_cidrs" {
-    description = "CIDR block for the public subnets"
-    type = list(string)
-  
+  description = "CIDR block for the public subnets"
+  type        = list(string)
+
 }
