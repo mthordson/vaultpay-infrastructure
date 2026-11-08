@@ -18,3 +18,8 @@ variable "db_private_subnet_cidrs" {
   description = "CIDR blocks for the db private subnets"
   type        = list(string)
 }
+
+variable "project_name" {
+  description = "Project name used in all Name and Project tags"
+  type        = string
+}
