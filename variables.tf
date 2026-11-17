@@ -26,12 +26,12 @@ variable "project_name" {
 
 variable "db_multi_az" {
   description = "Single-AZ vs Multi-AZ"
-  type        = bool  
+  type        = bool
 }
 
 variable "db_backup_retention_period" {
   description = "Days of the backups to keep"
-  type        = number 
+  type        = number
 }
 
 variable "db_deletion_protection" {
@@ -41,5 +41,5 @@ variable "db_deletion_protection" {
 
 variable "db_skip_final_snapshot" {
   description = "Whether a snapshot is taken on destroy"
-  type        = bool 
+  type        = bool
 }

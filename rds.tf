@@ -14,6 +14,13 @@ resource "aws_security_group" "rds" {
   description = "Security group for the Vaultpay RDS instance"
   vpc_id      = module.vpc.vpc_id
 
+  ingress {
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    cidr_blocks = var.app_private_subnet_cidrs
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
