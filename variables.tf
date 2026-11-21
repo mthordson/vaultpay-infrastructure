@@ -43,3 +43,14 @@ variable "db_skip_final_snapshot" {
   description = "Whether a snapshot is taken on destroy"
   type        = bool
 }
+
+variable "ecr_force_delete" {
+  description = "Ecr forcefully deleted"
+  type        = bool
+  default     = false
+}
+variable "s3_force_destroy" {
+  description = "S3 forcefully destroyed"
+  type        = bool
+  default     = false
+}
