@@ -15,18 +15,18 @@ resource "aws_ecr_repository" "vaultpay" {
   }
 
 }
-resource "aws_s3_bucket" "uploads" {
-  bucket        = "${data.aws_caller_identity.current.account_id}-${lower(var.project_name)}-uploads"
+resource "aws_s3_bucket" "runtime" {
+  bucket        = "${data.aws_caller_identity.current.account_id}-${lower(var.project_name)}-runtime"
   force_destroy = var.s3_force_destroy
 
   tags = {
-    Name    = "${lower(var.project_name)}-uploads"
+    Name    = "${lower(var.project_name)}-runtime"
     Project = var.project_name
   }
 }
 
-resource "aws_s3_bucket_public_access_block" "uploads" {
-  bucket = aws_s3_bucket.uploads.id
+resource "aws_s3_bucket_public_access_block" "runtime" {
+  bucket = aws_s3_bucket.runtime.id
 
   block_public_acls       = true
   ignore_public_acls      = true

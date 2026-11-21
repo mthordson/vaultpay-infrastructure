@@ -5,5 +5,5 @@ output "ecr_repository_url" {
 
 output "runtime_bucket_name" {
   description = "Name of the S3 bucket holding Vaultpay runtime data."
-  value       = aws_s3_bucket.uploads.id
+  value       = aws_s3_bucket.runtime.id
 }
