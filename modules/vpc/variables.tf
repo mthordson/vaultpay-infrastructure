@@ -20,6 +20,6 @@ variable "db_private_subnet_cidrs" {
 }
 
 variable "project_name" {
-    description = "Project name used in all Name and Project tags"
-    type = string
+  description = "Project name used in all Name and Project tags"
+  type        = string
 }

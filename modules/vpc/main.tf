@@ -142,7 +142,7 @@ resource "aws_route_table" "private" {
   }
 }
 
-resource "aws_route_table_association" "app_private_a" { 
+resource "aws_route_table_association" "app_private_a" {
   subnet_id      = aws_subnet.app_private_a.id
   route_table_id = aws_route_table.private.id
 }
