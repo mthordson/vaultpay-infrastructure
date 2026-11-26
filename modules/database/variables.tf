@@ -10,12 +10,12 @@ variable "vpc_id" {
 
 variable "db_subnet_ids" {
   description = "Database Subnet ID"
-  type        = list(string) 
+  type        = list(string)
 }
 
-variable "app_private_subnet_cidrs" {
-  description = "CIDR block for the app private subnets"
-  type        = list(string)
+variable "app_security_group_id" {
+  description = "Security group ID of the app instances allowed to reach the DB"
+  type        = string
 }
 
 variable "db_multi_az" {
